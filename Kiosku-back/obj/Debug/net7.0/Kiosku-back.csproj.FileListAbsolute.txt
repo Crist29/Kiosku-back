@@ -80,3 +80,4 @@ D:\Code\Kiosku-back\Kiosku-back\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.R
 D:\Code\Kiosku-back\Kiosku-back\bin\Debug\net7.0\MySqlConnector.dll
 D:\Code\Kiosku-back\Kiosku-back\bin\Debug\net7.0\Pomelo.EntityFrameworkCore.MySql.dll
 D:\Code\Kiosku-back\Kiosku-back\bin\Debug\net7.0\Dapper.dll
+D:\Code\Kiosku-back\Kiosku-back\bin\Debug\net7.0\Transbank.dll

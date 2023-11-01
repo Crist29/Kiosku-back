@@ -1,11 +1,7 @@
 ﻿using Dapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Common;
-using System.Collections.Generic;
-using System.Reflection.Metadata.Ecma335;
+using Kiosku_back.Models;
 
 namespace Kioskuback.Controllers
 {
@@ -16,6 +12,7 @@ namespace Kioskuback.Controllers
         private string connection = @"Server=localhost; Uid=root; Password=1234; Database=kiosku";
 
         [HttpGet]
+        [Route("listarProducto")]
         public IActionResult Get()
         {
             IEnumerable<Kiosku_back.Models.Producto> lst = null;
@@ -26,11 +23,11 @@ namespace Kioskuback.Controllers
                 lst = db.Query<Kiosku_back.Models.Producto>(sql);
             }
             return Ok(lst);
-
         }
 
 
         [HttpPost]
+        [Route("agregarProducto")]
         public IActionResult insert(Kiosku_back.Models.Producto model)
         {
             int result = 0;
@@ -44,6 +41,7 @@ namespace Kioskuback.Controllers
         }
 
         [HttpPut]
+        [Route("editarProducto")]
         public IActionResult edit(Kiosku_back.Models.Producto model)
         {
             int result = 0;
@@ -57,6 +55,7 @@ namespace Kioskuback.Controllers
         }
 
         [HttpDelete]
+        [Route("eliminarProducto")]
         public IActionResult delete(Kiosku_back.Models.Producto model)
         {
             int result = 0;

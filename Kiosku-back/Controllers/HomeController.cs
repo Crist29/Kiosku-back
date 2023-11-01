@@ -1,6 +1,7 @@
 ﻿using Kiosku_back.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Kiosku_back.Controllers
 {
@@ -13,9 +14,14 @@ namespace Kiosku_back.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
+            //TbkController prueba = new TbkController();
+            //string vuelta = prueba.llamadaWebpay();
+            //ViewBag.token = vuelta;
+
             return View();
+
         }
 
         public IActionResult Privacy()
